@@ -51,13 +51,13 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
-def set_preferences
-  @preferences = Preference.first
-end
-
   private
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def set_preferences
+    @preferences = Preference.first
   end
 end
