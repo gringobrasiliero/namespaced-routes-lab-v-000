@@ -17,6 +17,7 @@ before_action :set_preferences, only: [:index, :new]
     else
     @artist = Artist.new
   end
+end
 
   def create
     @artist = Artist.new(artist_params)
